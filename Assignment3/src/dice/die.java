@@ -10,16 +10,14 @@ public class die {
 	private int faceValue;
 	private int numFaces;
 	
-	// class methods
-	
-	
 	// instance methods
+	//Constructor
 	public die (int faceValue, int numFaces) {
 		this.faceValue = faceValue;
 		this.numFaces = numFaces;
 		
 	}
-	
+	//constructor
 	public die (int faceValue) {
 		this.faceValue = faceValue;
 		this.numFaces = DEFAULT_NUM_FACES;
@@ -30,7 +28,7 @@ public class die {
 //			
 //	}
 //	
-	
+	// default constructor
 	public die () {
 		this.faceValue = DEFAULT_NUM_FACES;
 		this.numFaces = DEFAULT_NUM_FACES;
@@ -54,5 +52,8 @@ public class die {
 	}
 	public String toString() {
 		return Integer.toString(faceValue);
+	}
+	public void roll() {
+		faceValue = (int) Math.round(Math.random()*numFaces);
 	}
 }
