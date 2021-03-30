@@ -1,4 +1,4 @@
-package dice;
+package Game;
 
 public class die {
 	

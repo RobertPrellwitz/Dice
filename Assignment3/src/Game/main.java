@@ -1,15 +1,12 @@
-package dice;
+package Game;
 
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("hello World!");
+		
 		die die1 = new die();
 		die die2 = new die();
 		
-		int die1Tot =0;
-		int die2Tot = 0;
 		int total = 0;
 		
 		for (int i = 1; i<4; i++) {
