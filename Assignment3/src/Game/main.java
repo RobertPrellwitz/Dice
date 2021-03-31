@@ -11,6 +11,7 @@ public class main {
 		tester.dieTest();
 		tester.profTest();
 		tester.sideTest();
+		tester.sideCheck();
 	}
 
 }

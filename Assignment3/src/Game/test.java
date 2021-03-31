@@ -68,13 +68,11 @@ public class test {
     public void sideTest(){
     	Die die1, die2;
     	die1 =new Die(8,8);
-    	//die2 = new Die(4,6);
-    	boolean check = true;
+    	    	boolean check = true;
     	
     	for (int i= 1; i <= 1000; i++) {
     		die1.roll();
-    	//	die2.roll();
-    		if (die1.getFaceValue() == 0 || die1.getFaceValue() > die1.getNumFaces()) {
+    	    		if (die1.getFaceValue() == 0 || die1.getFaceValue() > die1.getNumFaces()) {
     			check = false;
     			System.out.println("The Die Rolled an invalid number: " + die1.getFaceValue() +
     			" which is outside the range of 1 to " + die1.getNumFaces() + " this failure ocurred on roll " + i +".");
@@ -83,6 +81,45 @@ public class test {
     		
     	}
     	if (check) { System.out.println("The roll test passed!");
+    	}
+    }
+    
+    public void sideCheck() {
+    	Die die = new Die(6,6);
+    	int side1 = 0, side2 = 0, side3 = 0, side4 = 0, side5 = 0, side6 = 0;
+    	for (int i = 0; i <= 10000; i++) {
+    		die.roll();
+    		int temp = die.getFaceValue();
+    		switch(temp) {
+    			case (1):
+    				side1++;
+    				break;
+    			case (2):
+    				side2++;
+    				break;
+    			case (3):
+    				side3++;
+    				break;
+    			case (4):
+    				side4++;
+    				break;
+    			case (5):
+    				side5++;
+    				break;
+    			case (6):
+    				side6++;
+    				break;
+    			default:
+    				System.out.println("something went wrong - a side value out of context was generated!");
+    				
+    		}
+    		
+    	}
+    	System.out.println("Side 1 total: "+ side1 +"\nSide 2 total: " + side2 + "\nSide 3 total: " + side3 +"\nSide 4 total: " + side4 + 
+				"\nSide 5 total: " + side5 + "\nSide 6 total: " + side6);
+    	if(!(side1 > 0) || !(side2 >0) || !(side3 >0) || !(side4 >0) || !(side5 >0) || !(side2 >0)) {
+    		System.out.println("there is an error in the roll method.  Look at the sides with no rolls over 10,000 attempts, "
+    				+ "to help identify the issue." );
     	}
     }
 }
