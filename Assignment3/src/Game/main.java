@@ -4,8 +4,8 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		die die1 = new die();
-		die die2 = new die();
+		Die die1 = new Die();
+		Die die2 = new Die();
 		
 		int total = 0;
 		
@@ -20,6 +20,10 @@ public class main {
 			
 		}
 		System.out.println("\nTotal of three tosses is: " + total);
+		
+		test tester = new test();
+		tester.dieTest();
+		tester.profTest();
 	}
 
 }

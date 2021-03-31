@@ -1,6 +1,6 @@
 package Game;
 
-public class die {
+public class Die {
 	
 	// class constants
 	private final int DEFAULT_NUM_FACES = 6;
@@ -12,13 +12,13 @@ public class die {
 	
 	// instance methods
 	//Constructor
-	public die (int faceValue, int numFaces) {
+	public Die (int faceValue, int numFaces) {
 		this.faceValue = faceValue;
 		this.numFaces = numFaces;
 		
 	}
 	//constructor
-	public die (int faceValue) {
+	public Die (int faceValue) {
 		this.faceValue = faceValue;
 		this.numFaces = DEFAULT_NUM_FACES;
 	}
@@ -29,13 +29,13 @@ public class die {
 //	}
 //	
 	// default constructor
-	public die () {
+	public Die () {
 		this.faceValue = DEFAULT_NUM_FACES;
 		this.numFaces = DEFAULT_NUM_FACES;
 	}
 
 	// Copy Constructor
-	public die (die die) {
+	public Die (Die die) {
 		this.faceValue = die.faceValue;
 		this.numFaces = die.numFaces;
 	};
@@ -44,7 +44,7 @@ public class die {
 	public int getFaceValue() {
 		return faceValue;
 	}
-	public int getNumfaces() {
+	public int getNumFaces() {
 		return numFaces;
 	}
 	public void setFaceValue(int face) {
