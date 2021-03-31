@@ -87,7 +87,7 @@ public class test {
     public void sideCheck() {
     	Die die = new Die(6,6);
     	int side1 = 0, side2 = 0, side3 = 0, side4 = 0, side5 = 0, side6 = 0;
-    	for (int i = 0; i <= 10000; i++) {
+    	for (int i = 0; i <= 100000; i++) {
     		die.roll();
     		int temp = die.getFaceValue();
     		switch(temp) {
