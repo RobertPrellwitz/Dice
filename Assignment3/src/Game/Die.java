@@ -54,6 +54,6 @@ public class Die {
 		return Integer.toString(faceValue);
 	}
 	public void roll() {
-		faceValue = ((int) Math.round(Math.random()*(numFaces-1))) + 1;
+		faceValue = (int) (Math.random()*(numFaces)) + 1;
 	}
 }
