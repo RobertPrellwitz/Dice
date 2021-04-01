@@ -7,11 +7,12 @@ public class main {
 		
 		
 		test tester = new test();
-		tester.gameTest();
+		
 		tester.dieTest();
 		tester.profTest();
 		tester.sideTest();
-		tester.sideCheck();
+		tester.rollCheck();
+		tester.gameTest();
 	}
 
 }

@@ -1,14 +1,22 @@
 package Game;
 
 public class test {
-	Die test = new Die();
-    Die test1 = new Die(8);
-    Die test3 = new Die(12, 20);
-    Die test4 = new Die(test3);
+	
 
     
     public void dieTest() {
-    	System.out.println("test: " +test);
+    	Die test = new Die();
+        Die test1 = new Die(4);
+        Die test3 = new Die(12, 20);
+        Die test4 = new Die(test3);
+    	
+    	System.out.println("This method tests the various constructor methods of the Die Class:");
+    	System.out.println("Test 1 - default constructor");
+    	System.out.println("test1 number of sides: " +test.getNumFaces() +"\ntest1 face value: " + test);
+    	
+    	System.out.println("Test 2 - face value overload nubmer 4");
+    	System.out.println("test2 number of sides: " +test1.getNumFaces() +"\ntest2 face value: " + test1);
+    
     	System.out.println("test3: " +test3);
     	System.out.println("test die 3 has "+test3.getNumFaces()+  " sides!\n and a face value of "
     			+ test3.getFaceValue());
@@ -84,7 +92,7 @@ public class test {
     	}
     }
     
-    public void sideCheck() {
+    public void rollCheck() {
     	Die die = new Die(6,6);
     	int side1 = 0, side2 = 0, side3 = 0, side4 = 0, side5 = 0, side6 = 0;
     	for (int i = 0; i <= 100000; i++) {
