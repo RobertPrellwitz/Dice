@@ -1,26 +1,28 @@
 package Game;
+import java.util.*;
 
 public class test {
 	
 
     
     public void dieTest() {
-    	Die test = new Die();
-        Die test1 = new Die(4);
+    	Die test1 = new Die();
+        Die test2 = new Die(4);
         Die test3 = new Die(12, 20);
         Die test4 = new Die(test3);
     	
     	System.out.println("This method tests the various constructor methods of the Die Class:");
     	System.out.println("Test 1 - default constructor");
-    	System.out.println("test1 number of sides: " +test.getNumFaces() +"\ntest1 face value: " + test);
+    	System.out.println("test1 number of sides: " +test1.getNumFaces() +"\ntest1 face value: " + test1);
     	
     	System.out.println("Test 2 - face value overload nubmer 4");
-    	System.out.println("test2 number of sides: " +test1.getNumFaces() +"\ntest2 face value: " + test1);
+    	System.out.println("test2 number of sides: " +test2.getNumFaces() +"\ntest2 face value: " + test2);
     
-    	System.out.println("test3: " +test3);
+    	System.out.println("Test 3 - number of side overload 20 face - value overload nubmer 12");
+    	
     	System.out.println("test die 3 has "+test3.getNumFaces()+  " sides!\n and a face value of "
     			+ test3.getFaceValue());
-    	System.out.println("test4: " +test4);
+    	System.out.println("test4 Facevalue: " +test4 + "\nTest4 number of sides: " +test4.getNumFaces());
     }
     
     public void gameTest() {
@@ -74,8 +76,11 @@ public class test {
     }
     
     public void sideTest(){
-    	Die die1, die2;
-    	die1 =new Die(8,8);
+    	Scanner input = new Scanner(System.in);
+    	Die die1;
+    	System.out.println("Please enter the nubmer of sides on your die.");
+    	int sides = Integer.parseInt(input.next());
+    	die1 =new Die(sides,sides);
     	    	boolean check = true;
     	
     	for (int i= 1; i <= 1000; i++) {
@@ -90,10 +95,11 @@ public class test {
     	}
     	if (check) { System.out.println("The roll test passed!");
     	}
+    	input.close();
     }
     
     public void rollCheck() {
-    	Die die = new Die(6,6);
+    	Die die = new Die();
     	int side1 = 0, side2 = 0, side3 = 0, side4 = 0, side5 = 0, side6 = 0;
     	for (int i = 0; i <= 100000; i++) {
     		die.roll();
