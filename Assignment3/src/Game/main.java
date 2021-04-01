@@ -15,6 +15,8 @@ public class main {
 		tester.sideTest();
 		// verifies that the roll method generates output for each side option
 		tester.rollCheck();
+		// verifies output for each side on user selected number of sides (ie general version of previous)
+		tester.customRollCheck();
 		// verifies that the simple game option works
 		tester.gameTest();
 	}

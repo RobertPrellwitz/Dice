@@ -2,7 +2,7 @@ package Game;
 import java.util.*;
 
 public class test {
-	
+	Scanner console = new Scanner(System.in);
 
     
     public void dieTest() {
@@ -76,10 +76,10 @@ public class test {
     }
     
     public void sideTest(){
-    	Scanner input = new Scanner(System.in);
+    	//Scanner input = new Scanner(System.in);
     	Die die1;
     	System.out.println("Please enter the nubmer of sides on your die.");
-    	int sides = Integer.parseInt(input.next());
+    	int sides = Integer.parseInt(console.next());
     	die1 =new Die(sides,sides);
     	    	boolean check = true;
     	
@@ -95,7 +95,7 @@ public class test {
     	}
     	if (check) { System.out.println("The roll test passed!");
     	}
-    	input.close();
+    	//input.close();
     }
     
     public void rollCheck() {
@@ -136,4 +136,32 @@ public class test {
     				+ "to help identify the issue." );
     	}
     }
+    
+    public void customRollCheck() {
+    	//Scanner input2 = new Scanner(System.in);
+    	Die die1;
+    	System.out.println("Please enter the nubmer of sides on your die.");
+    	int sides = Integer.parseInt(console.next());
+    	die1 = new Die(sides, sides);
+    	int [] sideTot = new int [sides];
+    	String [] sideName = new String [sides];
+    	
+    	
+    	for (int i=0; i<sides; i++) {
+    		sideName[i] = ("side" + (i+1));
+    	}
+    	
+    	for (int i= 0; i <=100; i++) {
+    		die1.roll();
+    		int roll = die1.getFaceValue();
+    		sideTot[roll-1] = sideTot[roll-1]+1;
+    	}
+    	
+    	for (int i = 0; i<sides; i++) {
+    		System.out.println(sideName[i] + ": "+ sideTot[i]);
+    	}
+    	//input2.close();
+    }
+    
+   
 }
