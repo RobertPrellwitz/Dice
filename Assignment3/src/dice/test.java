@@ -35,7 +35,11 @@ public class test {
 	   	else {constructor = false; System.out.println("Test Failed\n");}
     	
     	System.out.println("test4 Facevalue: " +test4 + "\nTest4 number of sides: " +test4.getNumFaces());
+    	
+    	String out = (constructor) ? "Constructor tests passed\n" : "Constructor tests failed\n";
+    	System.out.println(out);
     }
+    
     
     public void gameTest() {
     	Die die1 = new Die();
