@@ -42,6 +42,9 @@ public class test {
     
     
     public void gameTest() {
+    	
+    	System.out.println("This method is Part 2 instructions: 'Create a main program that uses a pair of dice"
+    			+ "\nto compute the sum of three tosses of the dice. \nBased on the default constructor.");
     	Die die1 = new Die();
 		Die die2 = new Die();
 		
@@ -97,7 +100,9 @@ public class test {
     public void sideTest(){
     	//Scanner input = new Scanner(System.in);
     	Die die1;
-    	System.out.println("Please enter the nubmer of sides on your die.");
+    	
+    	System.out.println("First of three methods testing the roll method. \nPlease enter the nubmer"
+    			+ " of sides on your die.");
     	int sides = Integer.parseInt(console.next());
     	die1 =new Die(sides,sides);
     	    	boolean check = true;
@@ -112,12 +117,15 @@ public class test {
     		} 
     		
     	}
-    	if (check) { System.out.println("The roll test passed!");
+    	if (check) { System.out.println("The roll test passed!\n\n");
     	}
     	//input.close();
     }
     
     public void rollCheck() {
+    	System.out.println("The second test of the roll method.  This test verifies that the method \ndoes generate"
+    			+ "outcomes that include each possible side and presents the \ntotals for each over 100,000 rolls."
+    			+ "\nMethod based on the default constructor.");
     	Die die = new Die();
     	int side1 = 0, side2 = 0, side3 = 0, side4 = 0, side5 = 0, side6 = 0;
     	for (int i = 0; i <= 100000; i++) {
@@ -150,16 +158,18 @@ public class test {
     	}
     	System.out.println("Side 1 total: "+ side1 +"\nSide 2 total: " + side2 + "\nSide 3 total: " + side3 +"\nSide 4 total: " + side4 + 
 				"\nSide 5 total: " + side5 + "\nSide 6 total: " + side6);
-    	if(!(side1 > 0) || !(side2 >0) || !(side3 >0) || !(side4 >0) || !(side5 >0) || !(side2 >0)) {
+    	if(!(side1 > 0) || !(side2 > 0) || !(side3 > 0) || !(side4 > 0) || !(side5 > 0) || !(side2 > 0)) {
     		System.out.println("there is an error in the roll method.  Look at the sides with no rolls over 10,000 attempts, "
     				+ "to help identify the issue." );
     	}
+    	System.out.println("\n\n");
     }
     
     public void customRollCheck() {
     	//Scanner input2 = new Scanner(System.in);
     	Die die1;
-    	System.out.println("Please enter the nubmer of sides on your die.");
+    	System.out.println("The third roll test.  Based on the overload constructor for number of sides.\n"
+    			+ "Verifies that all sides are rolled. \nPlease enter the nubmer of sides on your die.");
     	int sides = Integer.parseInt(console.next());
     	die1 = new Die(sides, sides);
     	int [] sideTot = new int [sides];
@@ -170,7 +180,7 @@ public class test {
     		sideName[i] = ("side" + (i+1));
     	}
     	
-    	for (int i= 0; i <=100; i++) {
+    	for (int i= 0; i <= 100000; i++) {
     		die1.roll();
     		int roll = die1.getFaceValue();
     		sideTot[roll-1] = sideTot[roll-1]+1;
@@ -179,7 +189,7 @@ public class test {
     	for (int i = 0; i<sides; i++) {
     		System.out.println(sideName[i] + ": "+ sideTot[i]);
     	}
-    	//input2.close();
+    	System.out.println();
     }
     
    
