@@ -1,18 +1,12 @@
-/* Robert Prellwitz
- * APC 350
- * Assignment 3
- * started 3/29/21
- * completed 4/3/21  
- */
+package dice;
 
-package Game;
+import Game.test;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
-		
-		
-		
+		// TODO Auto-generated method stub
+
 		test tester = new test();
 		// constructor test
 		tester.dieTest();
