@@ -1,6 +1,12 @@
-package dice;
+/* Robert Prellwitz
+ *  * APC 350
+ * Assignment 3
+ * started 3/29/21
+ * completed 4/3/21  
+ */
 
-import Game.test;
+package dice;
+//import Game.Fifty;
 
 public class Main {
 
