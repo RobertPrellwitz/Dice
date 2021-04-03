@@ -61,6 +61,7 @@ public class test {
     }
     
     public void profTest() {
+    	System.out.println("\n\nThis is the series of tests put in the discord chat as the method profTest");
     	Die d1, d2, d3, d4;
     	d1 = new Die();
     	d2 = new Die(2);
@@ -89,6 +90,8 @@ public class test {
     	System.out.println("rolling d1");
     	d1.roll();
     	System.out.println("d1: " + d1);
+    	
+    	System.out.println("\n\n");
     }
     
     public void sideTest(){
