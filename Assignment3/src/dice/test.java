@@ -5,23 +5,35 @@ public class test {
 	Scanner console = new Scanner(System.in);
 
     
-    public void dieTest() {
+    public void constructorTest() {
     	Die test1 = new Die();
         Die test2 = new Die(4);
         Die test3 = new Die(12, 20);
         Die test4 = new Die(test3);
+        boolean constructor = true;
+        
     	
     	System.out.println("This method tests the various constructor methods of the Die Class:");
     	System.out.println("Test 1 - default constructor");
     	System.out.println("test1 number of sides: " +test1.getNumFaces() +"\ntest1 face value: " + test1);
+    	 if (test1.getNumFaces() == 6 || test1.getFaceValue() == 6) {  System.out.println("Test Passed\n");}
+    	 else
+    	 {constructor = false;
+    	 System.out.println("Test Failed\n");
+    	 }
     	
     	System.out.println("Test 2 - face value overload nubmer 4");
     	System.out.println("test2 number of sides: " +test2.getNumFaces() +"\ntest2 face value: " + test2);
+    	if (test2.getNumFaces() == 6 || test2.getFaceValue() == 4) {  System.out.println("Test Passed\n");}
+	   	else {constructor = false; System.out.println("Test Failed\n");}
+    	
     
     	System.out.println("Test 3 - number of side overload 20 face - value overload nubmer 12");
-    	
-    	System.out.println("test die 3 has "+test3.getNumFaces()+  " sides!\n and a face value of "
+    	System.out.println("test die 3 has "+test3.getNumFaces() +  " sides!\nand a face value of "
     			+ test3.getFaceValue());
+    	if (test3.getNumFaces() == 20 || test3.getFaceValue() == 12) {  System.out.println("Test Passed\n");}
+	   	else {constructor = false; System.out.println("Test Failed\n");}
+    	
     	System.out.println("test4 Facevalue: " +test4 + "\nTest4 number of sides: " +test4.getNumFaces());
     }
     
@@ -37,7 +49,7 @@ public class test {
 			die2.roll();
 			int temp2 = die2.getFaceValue();
 			int sub = temp1 + temp2;
-			total = total +sub;
+			total = total + sub;
 			System.out.printf("\nRole %d: generated a %d and a %d for a total of %d", i, temp1,temp2, sub);
 			
 		}

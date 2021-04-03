@@ -15,7 +15,7 @@ public class Main {
 
 		test tester = new test();
 		// constructor test
-		tester.dieTest();
+		tester.constructorTest();
 		// professor test
 		tester.profTest();
 		// verifies that the roll method generates numbers consistent with the number of sides
